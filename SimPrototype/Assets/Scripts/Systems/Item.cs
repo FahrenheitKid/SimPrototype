@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using SimPrototype;
 using UnityEngine;
 
+
+[Serializable]
 public abstract class Item
 {
+    [field: SerializeField] public int ID { get; private set; } 
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public Enums.ItemType ItemType { get; private set; }
     [field: SerializeField] public string Description { get; private set; }
@@ -14,8 +17,8 @@ public abstract class Item
     [field: SerializeField] public Sprite Icon { get; private set; }
     
 
-    public abstract void Buy();
-    public abstract void Sell();
+    public abstract void Buy(Player buyer, Shop seller);
+    public abstract void Sell(Shop seller, Player buyer);
     public abstract void Use();
     public abstract void Trash();
 

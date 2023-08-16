@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using SimPrototype;
 using UnityEngine;
 
 public class Clothing : Item, IWearable
 {
-    public override void Buy()
+    [SerializeField] private Enums.ClothingType _clothingType;
+    [SerializeField] private string firstFrameSpriteName;
+    public override void Buy(Player buyer, Shop seller)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Sell()
+    public override void Sell(Shop seller, Player buyer)
     {
         throw new System.NotImplementedException();
     }

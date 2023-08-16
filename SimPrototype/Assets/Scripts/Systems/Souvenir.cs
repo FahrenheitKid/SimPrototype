@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Souvenir : Item
 {
-    public override void Buy()
+    public override void Buy(Player buyer, Shop seller)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Sell()
+    public override void Sell(Shop seller, Player buyer)
     {
         throw new System.NotImplementedException();
     }
