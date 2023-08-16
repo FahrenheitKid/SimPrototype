@@ -6,8 +6,8 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private Inventory _inventory;
-    [SerializeField] private BoxCollider2D _shopCollider;
     [SerializeField] private SpriteRenderer _shopkeeperEmoteRenderer;
+    [SerializeField] private bool _isPlayerInsideShop;
     private Tween shopkeeperEmoteFloatLoop;
 
     public void SetupListeners(Player player, bool on)
@@ -36,6 +36,8 @@ public class Shop : MonoBehaviour
         {
             shopkeeperEmoteFloatLoop.Restart();
         }
+
+        _isPlayerInsideShop = true;
     }
     
     void OnPlayerExitShopTrigger()
@@ -45,6 +47,18 @@ public class Shop : MonoBehaviour
         {
             shopkeeperEmoteFloatLoop.Pause();
         }
+
+        _isPlayerInsideShop = false;
+
+    }
+
+    void ShowShopButton()
+    {
+        
+    }
+
+    void ShowShopMenu()
+    {
         
     }
 }

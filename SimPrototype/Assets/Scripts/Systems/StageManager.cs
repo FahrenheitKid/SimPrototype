@@ -20,6 +20,14 @@ public class StageManager : MonoBehaviour
         
     }
 
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+        Application.Quit();
+    }
+
     private void OnDisable()
     {
         _shop.SetupListeners(_player,false);
