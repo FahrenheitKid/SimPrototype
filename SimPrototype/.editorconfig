@@ -1,0 +1,8 @@
+# Visual Studio Reference: https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options
+# Rider Reference: https://www.jetbrains.com/help/rider/EditorConfig_Index.html
+
+# top-most EditorConfig file
+root = true
+
+[*generated.cs]
+generated_code = true
