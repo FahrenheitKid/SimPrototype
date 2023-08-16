@@ -8,14 +8,27 @@ using UnityEngine;
 [Serializable]
 public abstract class Item
 {
-    [field: SerializeField] public int ID { get; private set; } 
-    [field: SerializeField] public string Name { get; private set; }
-    [field: SerializeField] public Enums.ItemType ItemType { get; private set; }
-    [field: SerializeField] public string Description { get; private set; }
-    [field: SerializeField] public int Price { get; private set; }
-    [field: SerializeField] public int SellPriceModifier { get; private set; }
-    [field: SerializeField] public Sprite Icon { get; private set; }
+
+    [field: SerializeField] public int ID { get; protected set; } 
+    [field: SerializeField] public string Name { get; protected set; }
+    [field: SerializeField] public Enums.ItemType ItemType { get; protected set; }
+    [field: SerializeField] public string Description { get; protected set; }
+    [field: SerializeField] public int Price { get; protected set; }
+    [field: SerializeField] public int SellPriceModifier { get; protected set; }
+    [field: SerializeField] public Sprite Icon { get; protected set; }
+    [field: SerializeField] public string FirstFrameSpriteName { get; protected set; }
     
+    /*public Item(int id, string name, Enums.ItemType itemType, string description, int price, int sellPriceModifier, Sprite icon, string firstFrameSpriteName)
+    {
+        ID = id;
+        Name = name;
+        ItemType = itemType;
+        Description = description;
+        Price = price;
+        SellPriceModifier = sellPriceModifier;
+        Icon = icon;
+        FirstFrameSpriteName = firstFrameSpriteName;
+    }*/
 
     public abstract void Buy(Player buyer, Shop seller);
     public abstract void Sell(Shop seller, Player buyer);

@@ -32,6 +32,36 @@ namespace UtilityTools
                 return Enums.Direction.Down;
             }
         }
+        
+        //adapted from: https://stackoverflow.com/questions/13169393/extract-number-at-end-of-string-in-c-sharp
+        static public int GetLastNumberFromString(string str)
+        {
+            if (string.IsNullOrEmpty(str)) return -1;
+            
+            int numberOfDigitsAtEnd = 0;
+            for (var i = str.Length - 1; i >= 0; i--)
+            {
+                if (!char.IsNumber(str[i]))
+                {
+                    break;
+                }
+
+                numberOfDigitsAtEnd++;
+            }
+        
+            var result = str[^numberOfDigitsAtEnd..];
+            
+            return int.TryParse(result, out int resultAsInt) ? resultAsInt : -1;
+
+        }
+
+        static public string GetStringWithoutLastNumber(string str)
+        {
+            var digits = new[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            var input = str;
+            var result = input.TrimEnd(digits);
+            return result;
+        }
     }
 }
 

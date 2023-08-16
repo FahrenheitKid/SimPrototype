@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: {x: 0, y: 0}
-  _moveSpeed: 10
+  _moveSpeed: 0.5
 --- !u!114 &214674240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0692834f1996d42b6b0fdc2ff81169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _renderer: {fileID: 0}
+  _shirtAnimator: {fileID: 1536865838}
+  _pantsAnimator: {fileID: 1778421898}
+  _shoesAnimator: {fileID: 1889196678}
+  _hairAnimator: {fileID: 1439321922}
+  _hatAnimator: {fileID: 275178613}
 --- !u!114 &214674241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,9 +409,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 216194131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &275178610
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &275178611
 Transform:
   m_ObjectHideFlags: 0
@@ -446,7 +464,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275178610}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -480,7 +498,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 550085645, guid: 624be502ad9167e4dbf18e03a5342270, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -488,7 +506,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &275178613
@@ -500,9 +518,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 275178610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &300319359
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,9 +627,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 300319359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1439321920
 Transform:
   m_ObjectHideFlags: 0
@@ -769,7 +811,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439321919}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -823,9 +865,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439321919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &1536865835
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,9 +974,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536865835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &1554950608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,9 +1129,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778421895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &1889196675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,9 +1238,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1889196675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01098a11c838724fab51dca7c688365, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c885980f1b833346ab62e58cb83a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ClothingPiece>k__BackingField:
+    <ID>k__BackingField: 0
+    <Name>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <Description>k__BackingField: 
+    <Price>k__BackingField: 0
+    <SellPriceModifier>k__BackingField: 0
+    <Icon>k__BackingField: {fileID: 0}
+    <FirstFrameSpriteName>k__BackingField: 
+    <ClothingType>k__BackingField: 0
+  _renderer: {fileID: 0}
+  _spriteAtlas: {fileID: 0}
 --- !u!1 &1915252860
 GameObject:
   m_ObjectHideFlags: 0

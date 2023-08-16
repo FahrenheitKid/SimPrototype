@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     void Init()
     {
         _input = new CustomInput();
+        _input.Enable();
         _playerMovement = GetComponent<PlayerMovement>();
         _animatorHandler = GetComponent<PlayerAnimatorHandler>();
         
