@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55023b5087f7a3540b35d885290a9590
+guid: a108cf6386dc0d947ae0ebdc2c8e39f5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: witch_walk_0
+      name: emoticons_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +167,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3126c173eed52e42b4c068900f567be
-      internalID: -1831404486
+      spriteID: 9df5a31d08543d4469ec354d5f9ac4e8
+      internalID: -928912354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_1
+      name: emoticons_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2933e94721de27243ae21b69fbad7bd7
+      internalID: 288926528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
-        width: 32
-        height: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +209,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4711d97050b90694e855cf56d35597fd
-      internalID: 513698490
+      spriteID: 3f00147249ffecc4ba9d70b0256a338d
+      internalID: -1069813106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_2
+      name: emoticons_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705cd843a87e8904cac920691cd3e813
+      internalID: 281923900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_4
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
-        width: 32
-        height: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,125 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb80de6e5080cc24b934c0191f632097
-      internalID: 230293479
+      spriteID: 7f56287bd1e6ca74db514925e73497ec
+      internalID: -1785502023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b819e289207296547b89abe72087725a
-      internalID: 124132228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 224cf4c9c702ba1408e3c1efaf1c7f08
-      internalID: -1796047668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d9c3daa142bd974aa7e266c068fa9a2
-      internalID: 1369991941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50059b331c838514ca4186ac2de7a048
-      internalID: 1275816814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c0092709ec315a4395c3ebb4b630617
-      internalID: 1932822063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_8
+      name: emoticons_5
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,20 +272,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aea0c0d5cc9a0d742998d23145cc06ca
-      internalID: -560025440
+      spriteID: 5e738a8c309a3f14a9e9bd5bac0083fa
+      internalID: -132379030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_9
+      name: emoticons_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0949dac2f0ef543b066add7b8608d4
+      internalID: 4834033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_7
       rect:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,20 +314,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f0d687e782f26d4fb9653a4167f7dfb
-      internalID: -1518762275
+      spriteID: 056832a4feee8bf469c201d70b8d7d5e
+      internalID: 747889297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_10
+      name: emoticons_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1875f6d78b698e4489656cb118d5e19a
+      internalID: -1368555756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_9
       rect:
         serializedVersion: 2
         x: 64
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,20 +356,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85c791e9eed1ea40be47c17a1e08f3b
-      internalID: -651492963
+      spriteID: 84c2093e509c1424499f8495a960d0ca
+      internalID: 1003212579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_11
+      name: emoticons_10
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,20 +377,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37cabb00392ba23409241d897fed746c
-      internalID: -119161117
+      spriteID: 1fa07fef33769ff479276bdc31bde0fd
+      internalID: -1786747714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_12
+      name: emoticons_11
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,20 +398,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26672169cd6a23547b0b71491ab4844d
-      internalID: 833764516
+      spriteID: 210d9cc008f81c240a3b39ef7b6af4c4
+      internalID: -1399628435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_13
+      name: emoticons_12
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,20 +419,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64169bf9d15ac9b4dadd7852bcd21b2b
-      internalID: 612890713
+      spriteID: 8b63aa8dfdb448e4284a2d69a60d37fb
+      internalID: -1382792721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_14
+      name: emoticons_13
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,20 +440,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c0763b990e78d0438de5ff3a14c3474
-      internalID: -1337287591
+      spriteID: 0f4fafe627c7438418400553148ffc4f
+      internalID: -1596915234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_15
+      name: emoticons_14
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,20 +461,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a852a5aa9cdd91429b7ffd3a9cdc381
-      internalID: 315748110
+      spriteID: d70b13ad969802a428cbe5d764231d9c
+      internalID: -1819752820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_16
+      name: emoticons_15
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,20 +482,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98cf4b9f866e3364a9aadb82886867b4
-      internalID: 1596518159
+      spriteID: 0ab065d286dc1c84e85161f1dbaeafb4
+      internalID: 350512211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_17
+      name: emoticons_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0368cf90b7694ae4888784c081dd6c4e
+      internalID: -186099389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_17
       rect:
         serializedVersion: 2
         x: 32
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,20 +524,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 852af9b3f2a33d64693e37602d6ccb83
-      internalID: 746773515
+      spriteID: 1e531dce5c03fb84faf0c8fa7e15b56c
+      internalID: 2038835996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_18
+      name: emoticons_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021f41f544089764a9941abfad5ab67d
+      internalID: -2050810260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_19
       rect:
         serializedVersion: 2
         x: 64
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,20 +566,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ec8cabd015084a44b47ffaad3024e14
-      internalID: 1139645486
+      spriteID: 70e256498d74d62469d66126f137034b
+      internalID: -63224094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_19
+      name: emoticons_20
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -566,20 +587,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e2e5ed1038ae7043bd928a54442841e
-      internalID: 577968326
+      spriteID: b502407877ae05548a8afd0b2357df94
+      internalID: -1260410286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_20
+      name: emoticons_21
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,20 +608,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7074829ee35fa44b640a8bf1a21ba4
-      internalID: -2124757875
+      spriteID: 64aa42ec42e9c4f4e9b6bf03ba45ddca
+      internalID: 955334055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_21
+      name: emoticons_22
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,20 +629,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03d7a90954bf9ee408e548f8bb773bbf
-      internalID: 913269190
+      spriteID: 876d89bc6dff39a46bd5dba8ed625d36
+      internalID: 1373045278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_22
+      name: emoticons_23
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -629,20 +650,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86969e2e40508dd46929cc5be43bec69
-      internalID: -1739158644
+      spriteID: b3d487cdb8647f041ac650e217845626
+      internalID: -787742224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_23
+      name: emoticons_24
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
+        x: 64
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,20 +671,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7642647b00b410a4e998c173e66af85c
-      internalID: -1504976893
+      spriteID: 806df828bccc8614686c53d5aa95fdf2
+      internalID: 305133927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_24
+      name: emoticons_25
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,20 +692,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c556269f4f66541a20615e83d53056
-      internalID: -984243900
+      spriteID: e5dcff332a2797e4d9392562fad140a3
+      internalID: -543213094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_25
+      name: emoticons_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3202b7c4dae8bb2448a71b32f246c4d0
+      internalID: 730673665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_27
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -692,20 +734,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f0911bdbaec584aa2294b96c53a7e2
-      internalID: 2044718063
+      spriteID: af0d191921f31c749861fc6d1c2dfeda
+      internalID: -1468525868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: witch_walk_26
+      name: emoticons_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081c10fa29eb717418169f9f25f9c116
+      internalID: 1207695805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoticons_29
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -713,113 +776,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4075b3d97bd3af9409fbeba54dfb29af
-      internalID: 707816479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_27
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45e871bc81c3fbf459abca2dcc468e61
-      internalID: 446534825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_28
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f29fc221f61b0541b5db751c9d998b3
-      internalID: -90699896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_29
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52fd70ab02f66aa4c9be5ed369c0aa48
-      internalID: -488935157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_30
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec8d07ed1336eb14a875c9f22e10728a
-      internalID: -2068905921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_walk_31
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b555d0d5c1142864592e9bdb0b12d307
-      internalID: 1512251194
+      spriteID: 58cbc2ff806ac824bb8b42e50788e10e
+      internalID: 383030598
       vertices: []
       indices: 
       edges: []
@@ -835,38 +793,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      witch_walk_0: -1831404486
-      witch_walk_1: 513698490
-      witch_walk_10: -651492963
-      witch_walk_11: -119161117
-      witch_walk_12: 833764516
-      witch_walk_13: 612890713
-      witch_walk_14: -1337287591
-      witch_walk_15: 315748110
-      witch_walk_16: 1596518159
-      witch_walk_17: 746773515
-      witch_walk_18: 1139645486
-      witch_walk_19: 577968326
-      witch_walk_2: 230293479
-      witch_walk_20: -2124757875
-      witch_walk_21: 913269190
-      witch_walk_22: -1739158644
-      witch_walk_23: -1504976893
-      witch_walk_24: -984243900
-      witch_walk_25: 2044718063
-      witch_walk_26: 707816479
-      witch_walk_27: 446534825
-      witch_walk_28: -90699896
-      witch_walk_29: -488935157
-      witch_walk_3: 124132228
-      witch_walk_30: -2068905921
-      witch_walk_31: 1512251194
-      witch_walk_4: -1796047668
-      witch_walk_5: 1369991941
-      witch_walk_6: 1275816814
-      witch_walk_7: 1932822063
-      witch_walk_8: -560025440
-      witch_walk_9: -1518762275
+      emoticons_0: -928912354
+      emoticons_1: 288926528
+      emoticons_10: -1786747714
+      emoticons_11: -1399628435
+      emoticons_12: -1382792721
+      emoticons_13: -1596915234
+      emoticons_14: -1819752820
+      emoticons_15: 350512211
+      emoticons_16: -186099389
+      emoticons_17: 2038835996
+      emoticons_18: -2050810260
+      emoticons_19: -63224094
+      emoticons_2: -1069813106
+      emoticons_20: -1260410286
+      emoticons_21: 955334055
+      emoticons_22: 1373045278
+      emoticons_23: -787742224
+      emoticons_24: 305133927
+      emoticons_25: -543213094
+      emoticons_26: 730673665
+      emoticons_27: -1468525868
+      emoticons_28: 1207695805
+      emoticons_29: 383030598
+      emoticons_3: 281923900
+      emoticons_4: -1785502023
+      emoticons_5: -132379030
+      emoticons_6: 4834033
+      emoticons_7: 747889297
+      emoticons_8: -1368555756
+      emoticons_9: 1003212579
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

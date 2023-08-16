@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1a5cbd2888d204abc974229ef6bde3, type: 3}
+  m_Name: 8_BobHair
+  m_EditorClassIdentifier: 
+  ID: 7
+  Name: Brown Bob Hair
+  ItemType: 0
+  ClothingType: 3
+  Description: Brown Bob Hair
+  Price: 0
+  SellPriceModifier: 0
+  Icon: {fileID: 737184430, guid: 384dc5072896f084791b35ea382422ec, type: 3}
+  FirstFrameSpriteName: bob_walk_0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,10 @@ public class Player : MonoBehaviour
     
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerAnimatorHandler _animatorHandler;
+
+    public Action OnShopEnter;
+
+    public Action OnShopExit;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,5 +36,21 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Shop"))
+        {
+            OnShopEnter?.Invoke();
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Shop"))
+        {
+            OnShopExit?.Invoke();
+        }
     }
 }

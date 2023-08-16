@@ -83,6 +83,7 @@ public class PlayerAnimatorHandler : MonoBehaviour
         _shirtAnimator.UpdateSprite(_renderer.sprite.name);
         _pantsAnimator.UpdateSprite(_renderer.sprite.name);
         _shoesAnimator.UpdateSprite(_renderer.sprite.name);
+        _hairAnimator.UpdateSprite(_renderer.sprite.name);
     }
     
     void OnMovementPerformed(InputAction.CallbackContext context)
