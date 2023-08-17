@@ -19,22 +19,22 @@ public class Consumable : Item, IConsumable
         FirstFrameSpriteName = firstFrameSpriteName;
         _healthModification = healthModification;
     }
-    public override void Buy(Player buyer, Shop seller)
+    public override void Buy(Player buyer, ShopUI seller)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Sell(Shop seller, Player buyer)
+    public override void Sell(Player seller, ShopUI buyer)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Use()
+    public override void Use(Player player)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Trash()
+    public override void Trash(Player player)
     {
         throw new System.NotImplementedException();
     }

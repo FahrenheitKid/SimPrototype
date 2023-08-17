@@ -16,13 +16,13 @@ public class PlayerAnimatorHandler : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     
     private Direction _currentDirection  = Direction.Down;
-    
-    [SerializeField] private ClothingAnimator _shirtAnimator;
-    [SerializeField] private ClothingAnimator _pantsAnimator;
-    [SerializeField] private ClothingAnimator _shoesAnimator;
-    [SerializeField] private ClothingAnimator _hairAnimator;
-    [SerializeField] private ClothingAnimator _hatAnimator;
-    
+
+    [field: SerializeField] public ClothingAnimator ShirtAnimator { get; private set;}
+    [field: SerializeField] public ClothingAnimator PantsAnimator { get; private set;}
+    [field: SerializeField] public ClothingAnimator ShoesAnimator { get; private set;}
+    [field: SerializeField] public ClothingAnimator HairAnimator { get; private set;}
+    [field: SerializeField] public ClothingAnimator HatAnimator { get; private set;}
+
     #region AnimatorHashes
     
     private static readonly int AnimationSpeed = Animator.StringToHash("AnimationSpeed");
@@ -64,26 +64,26 @@ public class PlayerAnimatorHandler : MonoBehaviour
         _input.Player.Movement.performed += OnMovementPerformed;
         _input.Player.Movement.canceled += OnMovementCanceled;
         
-        InitializeClothingAnimators();
+        //InitializeClothingAnimatorsWithDefault();
     }
 
-    void InitializeClothingAnimators()
+    void InitializeClothingAnimatorsWithDefault()
     {
-        _shirtAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Shirt));
+        ShirtAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Shirt));
         //_shirtAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetClothingByID(0));
-        _pantsAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Pants));
-        _shoesAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Shoes));
-        _hairAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Hair));
-        _hatAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Hat));
+        PantsAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Pants));
+        ShoesAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Shoes));
+        HairAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Hair));
+        HatAnimator.Setup(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(ClothingType.Hat));
     }
 
     void LateUpdate()
     {
-        Debug.Log(_renderer.sprite.name);
-        _shirtAnimator.UpdateSprite(_renderer.sprite.name);
-        _pantsAnimator.UpdateSprite(_renderer.sprite.name);
-        _shoesAnimator.UpdateSprite(_renderer.sprite.name);
-        _hairAnimator.UpdateSprite(_renderer.sprite.name);
+        //Debug.Log(_renderer.sprite.name);
+        ShirtAnimator.UpdateSprite(_renderer.sprite.name);
+        PantsAnimator.UpdateSprite(_renderer.sprite.name);
+        ShoesAnimator.UpdateSprite(_renderer.sprite.name);
+        HairAnimator.UpdateSprite(_renderer.sprite.name);
     }
     
     void OnMovementPerformed(InputAction.CallbackContext context)

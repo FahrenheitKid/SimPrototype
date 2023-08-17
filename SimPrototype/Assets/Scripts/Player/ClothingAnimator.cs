@@ -47,6 +47,7 @@ public class ClothingAnimator : MonoBehaviour
 
     public void UpdateSprite(string parentSpriteName)
     {
+        if(ClothingPiece == null || string.IsNullOrEmpty(parentSpriteName)) return;
         //we get the sprite index from parent. The base sprite is already "normalized" since the spritesheet is correct
         int currentParentNormalizedIndex = UtilityTools.UtilityTools.GetLastNumberFromString(parentSpriteName);
         int startingSpriteIndex = ClothingPiece.GetStartingSpriteSheetIndex();

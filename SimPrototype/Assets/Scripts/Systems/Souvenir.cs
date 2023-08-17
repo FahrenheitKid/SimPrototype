@@ -17,23 +17,19 @@ public class Souvenir : Item
         Icon = icon;
         FirstFrameSpriteName = firstFrameSpriteName;
     }
-    public override void Buy(Player buyer, Shop seller)
+    public override void Buy(Player buyer, ShopUI seller)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Sell(Shop seller, Player buyer)
+    public override void Sell(Player seller, ShopUI buyer)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Use()
+    public override void Use(Player player)
     {
-        throw new System.NotImplementedException();
+        // souvenirs dont do any action
     }
 
-    public override void Trash()
-    {
-        throw new System.NotImplementedException();
-    }
 }

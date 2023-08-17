@@ -8,8 +8,6 @@ using static UtilityTools.UtilityTools;
 [Serializable]
 public class Clothing : Item, IWearable
 {
-    [field: SerializeField] public Enums.ClothingType ClothingType { get; private set; }
-
     // the spritesheets used are not organized one color after the other like
     // 1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3
     // 4,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6
@@ -35,29 +33,24 @@ public class Clothing : Item, IWearable
         FirstFrameSpriteName = firstFrameSpriteName;
         ClothingType = clothingType;
     }
-    public override void Buy(Player buyer, Shop seller)
+    public override void Buy(Player buyer, ShopUI seller)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Sell(Shop seller, Player buyer)
+    public override void Sell(Player seller, ShopUI buyer)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void Use()
+    public override void Use(Player player)
     {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Trash()
-    {
-        throw new System.NotImplementedException();
+        Wear(player);
     }
 
     public void Wear(Player player)
     {
-        throw new System.NotImplementedException();
+        player.Wear(this);
     }
 
     public int GetStartingSpriteSheetIndex()

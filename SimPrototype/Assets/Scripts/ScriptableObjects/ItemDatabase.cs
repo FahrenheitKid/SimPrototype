@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using SimPrototype;
 using UnityEngine;
 using UnityEngine.U2D;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu(menuName = "Assets/Items/Item Database")]
 public class ItemDatabase : ScriptableObject
@@ -43,6 +45,18 @@ public class ItemDatabase : ScriptableObject
         }
     }
 
+    public List<Item> GetAllItems()
+    {
+        List<Item> result = new List<Item>();
+
+        foreach (ItemData data in Items)
+        {
+            result.Add(ConvertItemDataToItem(data));
+        }
+        
+        return result;
+    }
+
     public static Clothing ConvertItemDataToClothing(ItemData itemData)
     {
         if (itemData.ItemType != Enums.ItemType.Clothing || itemData == null) return null;
@@ -63,5 +77,27 @@ public class ItemDatabase : ScriptableObject
         
         return new Souvenir(itemData.ID, itemData.Name,itemData.ItemType,itemData.Description,
             itemData.Price,itemData.SellPriceModifier,itemData.Icon,itemData.FirstFrameSpriteName);
+    }
+    public static Item ConvertItemDataToItem(ItemData itemData)
+    {
+        if (itemData == null) return null;
+        Item item;
+
+        switch (itemData.ItemType)
+        {
+            case Enums.ItemType.Clothing:
+                item = ConvertItemDataToClothing(itemData);
+                break;
+            case Enums.ItemType.Consumable:
+                item = ConvertItemDataToConsumable(itemData);
+                break;
+            case Enums.ItemType.Souvenir:
+                item = ConvertItemDataToSouvenir(itemData);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
+        return item;
     }
 }

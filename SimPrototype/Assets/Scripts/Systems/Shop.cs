@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private Inventory _inventory;
+    
     [SerializeField] private SpriteRenderer _shopkeeperEmoteRenderer;
     [SerializeField] private bool _isPlayerInsideShop;
+    [SerializeField] private Button shopButton;
     private Tween shopkeeperEmoteFloatLoop;
+    private Tween shopButtonFadeTween;
 
     public void SetupListeners(Player player, bool on)
     {
@@ -38,6 +41,7 @@ public class Shop : MonoBehaviour
         }
 
         _isPlayerInsideShop = true;
+        ShowShopButton(_isPlayerInsideShop);
     }
     
     void OnPlayerExitShopTrigger()
@@ -49,16 +53,30 @@ public class Shop : MonoBehaviour
         }
 
         _isPlayerInsideShop = false;
+        ShowShopButton(_isPlayerInsideShop);
 
     }
 
-    void ShowShopButton()
+    void ShowShopButton(bool on)
     {
-        
+        CanvasGroup shopButtonGroup = shopButton.GetComponent<CanvasGroup>();
+        if (shopButtonGroup == null) return;
+
+
+        shopButtonGroup.interactable = on;
+        shopButtonGroup.blocksRaycasts = on;
+
+        if (shopButtonFadeTween == null)
+        {
+           shopButtonFadeTween = shopButtonGroup.DOFade(on ? 1f : 0, 1f);
+        }
+        else
+        {
+            shopButtonFadeTween.Kill();
+            shopButtonFadeTween = shopButtonGroup.DOFade(on ? 1f : 0, 1f);
+        }
+
+
     }
 
-    void ShowShopMenu()
-    {
-        
-    }
 }
