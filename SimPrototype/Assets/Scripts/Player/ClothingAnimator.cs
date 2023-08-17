@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using SimPrototype;
-using Unity.VisualScripting;
-using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.U2D;
 
