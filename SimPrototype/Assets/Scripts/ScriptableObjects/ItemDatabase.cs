@@ -32,7 +32,7 @@ public class ItemDatabase : ScriptableObject
 
     public Clothing GetRandomClothing(Enums.ClothingType clothingType)
     {
-        List<ItemData> filteredClothing = Items.FindAll(x => x.ClothingType == clothingType);
+        List<ItemData> filteredClothing = Items.FindAll(x => x.ItemType == Enums.ItemType.Clothing && x.ClothingType == clothingType);
         ItemData clothingData = filteredClothing.ElementAtOrDefault(Random.Range(0, filteredClothing.Count));
         
         if (clothingData != null)

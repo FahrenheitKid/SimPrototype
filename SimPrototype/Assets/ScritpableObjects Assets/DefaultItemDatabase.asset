@@ -34,6 +34,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cb4a9b2f65c819541ab37d3f3a576dff, type: 2}
   - {fileID: 11400000, guid: d8aab73aee63e4b4abfd41a003a08454, type: 2}
   - {fileID: 11400000, guid: be87506d295696041b85877a00a00f12, type: 2}
+  - {fileID: 11400000, guid: ed769184c7bd5b046b08ad3e60b062ca, type: 2}
   CharacterSpriteAtlas: {fileID: 4343727234628468602, guid: e134c1129b677a44cb1863ade7e04fdd, type: 2}
   NonWearableSpriteAtlas: {fileID: 0}
-  UISpriteAtlas: {fileID: 0}
+  UISpriteAtlas: {fileID: 4343727234628468602, guid: f3a58b173d1dd774ab1b540e6c9f9e32, type: 2}

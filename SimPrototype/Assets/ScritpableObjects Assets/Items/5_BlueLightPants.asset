@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemType: 0
   ClothingType: 1
   Description: Some Light Blue Pants
-  Price: 0
-  SellPriceModifier: 0
+  Price: 25
+  SellPriceModifier: 0.6
   Icon: {fileID: -295331417, guid: 104bacaf893b13c42b94492719625247, type: 3}
   FirstFrameSpriteName: pants_walk_16

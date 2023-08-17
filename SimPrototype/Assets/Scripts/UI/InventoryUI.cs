@@ -57,7 +57,12 @@ public class InventoryUI : MenuUI
     public override void SelectItem(Item item)
     {
         base.SelectItem(item);
-        if (item == null) return;
+        if (item == null)
+        {
+            _useButton.onClick.RemoveAllListeners();
+            _trashButton.onClick.RemoveAllListeners();
+            return;
+        }
         //we update the buttons text and functions to reflect the new selected item
         _useButtonText.SetText(item.ItemType == Enums.ItemType.Clothing ? "Wear" : "Use");
         _useButton.onClick.RemoveAllListeners();
@@ -72,6 +77,7 @@ public class InventoryUI : MenuUI
         if (item.ItemType == Enums.ItemType.Consumable) // if consumable we need to update list
         {
             //if fully consumed the item will be trashed so we update the list
+            SelectItem(null);
             RemoveItemFromUIList(item); 
         }
         
@@ -82,6 +88,7 @@ public class InventoryUI : MenuUI
     {
         if (item == null) return;
         
+        SelectItem(null);
         RemoveItemFromUIList(item); 
         item.Trash(_playerRef);
     }

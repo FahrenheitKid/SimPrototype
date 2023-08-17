@@ -175,16 +175,16 @@ public class Player : MonoBehaviour
                 Shirt = clothing;
                 break;
             case Enums.ClothingType.Pants:
-                Pants = Pants;
+                Pants = clothing;
                 break;
             case Enums.ClothingType.Shoes:
-                Shoes = Shoes;
+                Shoes = clothing;
                 break;
             case Enums.ClothingType.Hair:
-                Hair = Hair;
+                Hair = clothing;
                 break;
             case Enums.ClothingType.Hat:
-                Hat = Hat;
+                Hat = clothing;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

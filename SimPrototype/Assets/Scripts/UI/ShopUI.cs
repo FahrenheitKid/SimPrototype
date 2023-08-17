@@ -58,6 +58,8 @@ public class ShopUI : MenuUI
     void PopulateListFromInventory(bool playerList)
     {
         // if bool playerList not the player, it is the shops
+        
+        ClearUIList(playerList);
         if (playerList)
         {
             foreach (Item item in PlayerInventory.Items)
@@ -109,14 +111,15 @@ public class ShopUI : MenuUI
     {
         base.SelectItem(item);
         
-        if(item== null) return;
         //we update the buttons text and functions to reflect the new selected item
-        _buyPriceText.SetText((item.Price).ToString());
-        _sellPriceText.SetText(((int)(item.SellPriceModifier * item.Price)).ToString());
+        // if null we just clear the info and remove listeners
+        _buyPriceText.SetText(item != null ? (item.Price).ToString() : "");
+        _sellPriceText.SetText(item != null ? ((int)(item.SellPriceModifier * item.Price)).ToString() : "");
         _buyButton.onClick.RemoveAllListeners();
         _sellButton.onClick.RemoveAllListeners();
+        if (item == null) return;
         
-        bool hasItem = PlayerInventory.HasItem(item) == false;
+        bool hasItem = PlayerInventory.HasItem(item);
         
         var colors = _sellButton.colors;
         colors.normalColor = new Color(255f,255f,255f,hasItem ? 255f : 255f/5f);
@@ -146,6 +149,9 @@ public class ShopUI : MenuUI
         else
         {
             UpdatePlayerMoneyText();
+            SelectItem(null);
+            PopulateListFromInventory(true);
+            
         }
         
     }

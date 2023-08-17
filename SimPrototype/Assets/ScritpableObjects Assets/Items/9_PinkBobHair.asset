@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemType: 0
   ClothingType: 3
   Description: Pink Bob Hair
-  Price: 0
-  SellPriceModifier: 0
+  Price: 25
+  SellPriceModifier: 0.6
   Icon: {fileID: -1367186831, guid: 384dc5072896f084791b35ea382422ec, type: 3}
   FirstFrameSpriteName: bob_walk_80

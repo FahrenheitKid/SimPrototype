@@ -79,11 +79,17 @@ public class PlayerAnimatorHandler : MonoBehaviour
 
     void LateUpdate()
     {
-        //Debug.Log(_renderer.sprite.name);
-        ShirtAnimator.UpdateSprite(_renderer.sprite.name);
-        PantsAnimator.UpdateSprite(_renderer.sprite.name);
-        ShoesAnimator.UpdateSprite(_renderer.sprite.name);
-        HairAnimator.UpdateSprite(_renderer.sprite.name);
+        UpdateAnimators();
+    }
+
+    void UpdateAnimators()
+    {
+        string spriteName = _renderer.sprite.name;
+        ShirtAnimator.UpdateSprite(spriteName);
+        PantsAnimator.UpdateSprite(spriteName);
+        ShoesAnimator.UpdateSprite(spriteName);
+        HairAnimator.UpdateSprite(spriteName);
+        HatAnimator.UpdateSprite(spriteName);
     }
     
     void OnMovementPerformed(InputAction.CallbackContext context)

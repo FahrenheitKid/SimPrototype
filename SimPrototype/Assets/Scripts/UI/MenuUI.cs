@@ -23,7 +23,19 @@ public class MenuUI : MonoBehaviour
 
     public virtual void SelectItem(Item item)
     {
-        if (item == null) return;
+        if (item == null)
+        {
+            if(_selectedItemTitle)
+                _selectedItemTitle.SetText("");
+        
+            if(_selectedItemDescription)
+                _selectedItemDescription.SetText("");
+
+            if (_selectedItemImage)
+                _selectedItemImage.sprite = null;
+            
+            return;
+        }
         
         if(_selectedItemTitle)
             _selectedItemTitle.SetText(item.Name);

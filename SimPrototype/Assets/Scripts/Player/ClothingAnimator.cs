@@ -51,8 +51,10 @@ public class ClothingAnimator : MonoBehaviour
         //we get the sprite index from parent. The base sprite is already "normalized" since the spritesheet is correct
         int currentParentNormalizedIndex = UtilityTools.UtilityTools.GetLastNumberFromString(parentSpriteName);
         int startingSpriteIndex = ClothingPiece.GetStartingSpriteSheetIndex();
+        
         //here we need to convert the normalized index to the rest of the spritesheets that are not layout properly
-        int currentRawIndex = GetIndexFromNormalizedIndex(startingSpriteIndex,currentParentNormalizedIndex,IsHair); 
+        // hats I picked are okay so dont need any calculations
+        int currentRawIndex = ClothingPiece.ClothingType != Enums.ClothingType.Hat ? GetIndexFromNormalizedIndex(startingSpriteIndex,currentParentNormalizedIndex,IsHair) : currentParentNormalizedIndex; 
 
         
         //the new sprite name will be the name of the clothing sprite with the index in sync with the parent animation walk

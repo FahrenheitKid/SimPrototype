@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemType: 0
   ClothingType: 0
   Description: Some Light Blue Shoes
-  Price: 0
-  SellPriceModifier: 0
+  Price: 25
+  SellPriceModifier: 0.6
   Icon: {fileID: -48500608, guid: 3ab4039c2cac0e341b62fa7ad3ed6768, type: 3}
   FirstFrameSpriteName: sailor_walk_72

@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemType: 0
   ClothingType: 0
   Description: A Light Blue  Shirt
-  Price: 0
-  SellPriceModifier: 0
+  Price: 25
+  SellPriceModifier: 0.6
   Icon: {fileID: -1869070644, guid: 54899e6718b22264aaad0ab60455b2f6, type: 3}
   FirstFrameSpriteName: basic_walk_16

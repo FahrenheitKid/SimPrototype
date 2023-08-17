@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c1a5cbd2888d204abc974229ef6bde3, type: 3}
-  m_Name: 2_BlackShoes
+  m_Name: 21_WitchHat
   m_EditorClassIdentifier: 
-  ID: 2
-  Name: Black Shoes
+  ID: 21
+  Name: Witch Hat
   ItemType: 0
-  ClothingType: 2
-  Description: Some Black Shoes
-  Price: 25
-  SellPriceModifier: 0.6
-  Icon: {fileID: 401084667, guid: ae3265c2bf104bc40940f22857476bb4, type: 3}
-  FirstFrameSpriteName: shoes_walk_0
+  ClothingType: 4
+  Description: To use during the Witch Hour
+  Price: 50
+  SellPriceModifier: 0.8
+  Icon: {fileID: 1393156075, guid: 09a58003f2ee8494ea5f7dacda336c20, type: 3}
+  FirstFrameSpriteName: hat_witch_walk_0

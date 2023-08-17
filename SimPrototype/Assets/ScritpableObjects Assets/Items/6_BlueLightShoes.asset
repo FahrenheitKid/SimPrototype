@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemType: 0
   ClothingType: 2
   Description: Some Light Blue Shoes
-  Price: 0
-  SellPriceModifier: 0
+  Price: 25
+  SellPriceModifier: 0.6
   Icon: {fileID: 747611257, guid: ae3265c2bf104bc40940f22857476bb4, type: 3}
   FirstFrameSpriteName: shoes_walk_16

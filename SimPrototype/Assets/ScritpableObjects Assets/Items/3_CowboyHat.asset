@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemType: 0
   ClothingType: 4
   Description: A Cowboy Hat
-  Price: 0
-  SellPriceModifier: 0
+  Price: 25
+  SellPriceModifier: 0.6
   Icon: {fileID: 550085645, guid: 624be502ad9167e4dbf18e03a5342270, type: 3}
   FirstFrameSpriteName: hat_cowboy_walk_0
