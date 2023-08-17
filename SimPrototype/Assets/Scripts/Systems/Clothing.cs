@@ -21,7 +21,7 @@ public class Clothing : Item, IWearable
     public const int AnimationSpriteSheetJumpHair = 105;
     public const int AnimationSpriteSheetTotalRowJumps = 3;
 
-    public Clothing (int id, string name, Enums.ItemType itemType, string description, int price, int sellPriceModifier, Sprite icon, string firstFrameSpriteName, Enums.ClothingType clothingType)
+    public Clothing (int id, string name, Enums.ItemType itemType, string description, int price, float sellPriceModifier, Sprite icon, string firstFrameSpriteName, Enums.ClothingType clothingType)
     {
         ID = id;
         Name = name;

@@ -7,7 +7,7 @@ public class Consumable : Item, IConsumable
 {
     private int _healthModification;
     
-    public Consumable (int id, string name, Enums.ItemType itemType, string description, int price, int sellPriceModifier, Sprite icon, string firstFrameSpriteName, int healthModification)
+    public Consumable (int id, string name, Enums.ItemType itemType, string description, int price, float sellPriceModifier, Sprite icon, string firstFrameSpriteName, int healthModification)
     {
         ID = id;
         Name = name;

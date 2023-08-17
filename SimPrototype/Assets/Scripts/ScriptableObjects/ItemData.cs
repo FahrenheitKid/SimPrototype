@@ -13,7 +13,7 @@ public class ItemData : ScriptableObject
     [TextArea]
     public string Description;
     public int Price;
-    public int SellPriceModifier;
+    public float SellPriceModifier;
     public Sprite Icon;
     public string FirstFrameSpriteName;
 }

@@ -15,12 +15,12 @@ public abstract class Item
     [field: SerializeField] public Enums.ClothingType ClothingType { get; protected set; }
     [field: SerializeField] public string Description { get; protected set; }
     [field: SerializeField] public int Price { get; protected set; }
-    [field: SerializeField] public int SellPriceModifier { get; protected set; }
+    [field: SerializeField] public float SellPriceModifier { get; protected set; }
     [field: SerializeField] public Sprite Icon { get; protected set; }
     [field: SerializeField] public string FirstFrameSpriteName { get; protected set; }
 
     public Item(){}
-    public Item(int id, string name, Enums.ItemType itemType, string description, int price, int sellPriceModifier, Sprite icon, string firstFrameSpriteName, Enums.ClothingType clothingType)
+    public Item(int id, string name, Enums.ItemType itemType, string description, int price, float sellPriceModifier, Sprite icon, string firstFrameSpriteName, Enums.ClothingType clothingType)
     {
         ID = id;
         Name = name;

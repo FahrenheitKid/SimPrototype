@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c1a5cbd2888d204abc974229ef6bde3, type: 3}
-  m_Name: 8_BobHair
+  m_Name: 19_Scissors
   m_EditorClassIdentifier: 
-  ID: 8
-  Name: Brown Bob Hair
-  ItemType: 0
-  ClothingType: 3
-  Description: Brown Bob Hair
-  Price: 0
-  SellPriceModifier: 0
-  Icon: {fileID: 737184430, guid: 384dc5072896f084791b35ea382422ec, type: 3}
-  FirstFrameSpriteName: bob_walk_0
+  ID: 19
+  Name: Scissors
+  ItemType: 2
+  ClothingType: 0
+  Description: Useful and potentially dangerous tool
+  Price: 15
+  SellPriceModifier: 0.4
+  Icon: {fileID: -1562645604, guid: 6d6323d969a692242af4f69d20dbeb3a, type: 3}
+  FirstFrameSpriteName: Miscellaneous_Scissors

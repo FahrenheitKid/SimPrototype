@@ -20,7 +20,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1b946b485d7d6e749ba7b82cf8d2c0b0, type: 2}
   - {fileID: 11400000, guid: 4ea9cf67c24e65943affcf426216a960, type: 2}
   - {fileID: 11400000, guid: 3e3d0a7942f7dd24dab687836964964f, type: 2}
+  - {fileID: 11400000, guid: 38f2241ff204afe4b9bb9525fa4a6627, type: 2}
   - {fileID: 11400000, guid: 4840aa0b650f2e148abe2a4dce6997f4, type: 2}
+  - {fileID: 11400000, guid: b2e3ae210d3689e4f9677d9aa7a144c4, type: 2}
+  - {fileID: 11400000, guid: 3df48c4baae90fa4eb899e1afb118e27, type: 2}
+  - {fileID: 11400000, guid: 69a34cb76027a864788b56aeee271e1d, type: 2}
+  - {fileID: 11400000, guid: 42cf91bfc4e6b734c8b0b1156cd94e8f, type: 2}
+  - {fileID: 11400000, guid: 66136ac4363483a47b9a54fef2f96ce1, type: 2}
+  - {fileID: 11400000, guid: 19313d33d82995548bf846bc5e18e6b2, type: 2}
+  - {fileID: 11400000, guid: d9304de9cf142764f9b9f01d78f4240d, type: 2}
+  - {fileID: 11400000, guid: 3a058a000e36576409156677e98b3b43, type: 2}
+  - {fileID: 11400000, guid: 8a1656fd6bfd61c458577e026bc6bdd5, type: 2}
+  - {fileID: 11400000, guid: cb4a9b2f65c819541ab37d3f3a576dff, type: 2}
+  - {fileID: 11400000, guid: d8aab73aee63e4b4abfd41a003a08454, type: 2}
+  - {fileID: 11400000, guid: be87506d295696041b85877a00a00f12, type: 2}
   CharacterSpriteAtlas: {fileID: 4343727234628468602, guid: e134c1129b677a44cb1863ade7e04fdd, type: 2}
   NonWearableSpriteAtlas: {fileID: 0}
   UISpriteAtlas: {fileID: 0}

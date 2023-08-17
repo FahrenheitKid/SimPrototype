@@ -6,7 +6,7 @@ using UnityEngine;
 public class Souvenir : Item
 {
     
-    public Souvenir (int id, string name, Enums.ItemType itemType, string description, int price, int sellPriceModifier, Sprite icon, string firstFrameSpriteName)
+    public Souvenir (int id, string name, Enums.ItemType itemType, string description, int price, float sellPriceModifier, Sprite icon, string firstFrameSpriteName)
     {
         ID = id;
         Name = name;

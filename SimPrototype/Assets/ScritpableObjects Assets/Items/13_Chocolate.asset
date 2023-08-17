@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c1a5cbd2888d204abc974229ef6bde3, type: 3}
-  m_Name: 7_WhiteSailorShirt 1
+  m_Name: 13_Chocolate
   m_EditorClassIdentifier: 
-  ID: 7
-  Name: White Sailor Shirt
-  ItemType: 0
+  ID: 13
+  Name: Chocolate
+  ItemType: 1
   ClothingType: 0
-  Description: Some Light Blue Shoes
-  Price: 0
-  SellPriceModifier: 0
-  Icon: {fileID: -48500608, guid: 3ab4039c2cac0e341b62fa7ad3ed6768, type: 3}
-  FirstFrameSpriteName: sailor_walk_72
+  Description: A Delicious traditional Chocolate bar
+  Price: 25
+  SellPriceModifier: 0.5
+  Icon: {fileID: 21300000, guid: 7b597cd3b73d5ef48a17f3632276db65, type: 3}
+  FirstFrameSpriteName: 26_chocolate

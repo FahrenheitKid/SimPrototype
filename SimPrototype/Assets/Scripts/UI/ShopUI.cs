@@ -35,6 +35,7 @@ public class ShopUI : MenuUI
     {
         base.ShowMenu(on);
         SelectItem(PlayerInventory.Items.FirstOrDefault(),true);
+        _moneyText.SetText("Money \n" + _playerRef.Money);
     }
 
     public void Setup(Inventory shopInventory, Player player)
@@ -43,7 +44,6 @@ public class ShopUI : MenuUI
         _playerRef = player;
         
         PopulateListsFromInventories();
-        _moneyText.SetText("Money \n" + player.Money);
     }
 
     void PopulateListsFromInventories()
@@ -80,6 +80,7 @@ public class ShopUI : MenuUI
     {
         base.SelectItem(item);
         
+        if(item== null) return;
         //we update the buttons text and functions to reflect the new selected item
         _buyPriceText.SetText((item.Price).ToString());
         _sellPriceText.SetText((item.SellPriceModifier * item.Price).ToString());
