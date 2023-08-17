@@ -19,28 +19,31 @@ public class Consumable : Item, IConsumable
         FirstFrameSpriteName = firstFrameSpriteName;
         _healthModification = healthModification;
     }
-    public override void Buy(Player buyer, ShopUI seller)
+    
+    public Consumable(Item consumable)
     {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Sell(Player seller, ShopUI buyer)
-    {
-        throw new System.NotImplementedException();
+        ID = consumable.ID;
+        Name = consumable.Name;
+        ItemType = consumable.ItemType;
+        Description = consumable.Description;
+        Price = consumable.Price;
+        SellPriceModifier = consumable.SellPriceModifier;
+        Icon = consumable.Icon;
+        FirstFrameSpriteName = consumable.FirstFrameSpriteName;
+        ClothingType = consumable.ClothingType;
     }
 
     public override void Use(Player player)
     {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Trash(Player player)
-    {
-        throw new System.NotImplementedException();
+        //here in use maybe in the future can do more work like, can consume a number of times and do the internal maintenance of that
+        Consume(player);
     }
 
     public void Consume(Player player)
     {
-        throw new System.NotImplementedException();
+        //here usually we would do some health modification for player, add temporary buffs etc
+        //then normally trash the item right after
+        
+        Trash(player);
     }
 }

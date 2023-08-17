@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -10,8 +11,20 @@ public class Shop : MonoBehaviour
     [SerializeField] private SpriteRenderer _shopkeeperEmoteRenderer;
     [SerializeField] private bool _isPlayerInsideShop;
     [SerializeField] private Button shopButton;
+    [SerializeField] private Inventory _shopInventory;
     private Tween shopkeeperEmoteFloatLoop;
     private Tween shopButtonFadeTween;
+
+    public Inventory ShopInventory
+    {
+        get => _shopInventory;
+        private set => _shopInventory = value;
+    }
+
+    private void Start()
+    {
+        ShopInventory = new Inventory(GameDatabase.Instance.ItemsDatabase.GetAllItems());
+    }
 
     public void SetupListeners(Player player, bool on)
     {
@@ -26,6 +39,11 @@ public class Shop : MonoBehaviour
             player.OnShopExit -= OnPlayerExitShopTrigger;
            
         }
+    }
+
+    public void Setup(Player player)
+    {
+        SetupListeners(player, true);
     }
     
     void OnPlayerEnteredShopTrigger()

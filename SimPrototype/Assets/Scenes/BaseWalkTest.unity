@@ -1448,6 +1448,7 @@ MonoBehaviour:
   _playerMovement: {fileID: 0}
   _animatorHandler: {fileID: 0}
   <Money>k__BackingField: 0
+  _itemsDebug: []
   shirt:
     <ID>k__BackingField: 0
     <Name>k__BackingField: 
@@ -1498,6 +1499,9 @@ MonoBehaviour:
     <SellPriceModifier>k__BackingField: 0
     <Icon>k__BackingField: {fileID: 0}
     <FirstFrameSpriteName>k__BackingField: 
+  references:
+    version: 2
+    RefIds: []
 --- !u!210 &214674242
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -14391,6 +14395,7 @@ MonoBehaviour:
   _sellPriceText: {fileID: 989667610}
   _moneyText: {fileID: 692208424}
   _playerRef: {fileID: 214674241}
+  _shopRef: {fileID: 841909045}
 --- !u!225 &1992516347
 CanvasGroup:
   m_ObjectHideFlags: 0

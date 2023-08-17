@@ -32,7 +32,7 @@ public class ClothingAnimator : MonoBehaviour
 
     void Init()
     {
-        _renderer.sprite = _spriteAtlas.GetSprite(ClothingPiece.FirstFrameSpriteName);
+        _renderer.sprite = ClothingPiece == null ? null : _spriteAtlas.GetSprite(ClothingPiece.FirstFrameSpriteName);
     }
 
     void LateUpdate()

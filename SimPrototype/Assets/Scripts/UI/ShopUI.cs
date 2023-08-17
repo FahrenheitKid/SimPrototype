@@ -11,10 +11,8 @@ using UnityEngine.UI;
 
 public class ShopUI : MenuUI
 {
-
-    [SerializeField] private Inventory _shopInventory;
-
-    public Inventory PlayerInventory => _playerRef != null ? _playerRef.PlayerInventory : null;
+    private Inventory PlayerInventory => _playerRef != null ? _playerRef.PlayerInventory : null;
+    private Inventory ShopInventory => _shopRef != null ? _shopRef.ShopInventory : null;
     [SerializeField] private GameObject _shopButtonPrefab;
     [SerializeField] private GameObject shopContentParent;
     [SerializeField] private GameObject playerContentParent;
@@ -24,6 +22,7 @@ public class ShopUI : MenuUI
     [SerializeField] private TextMeshProUGUI _sellPriceText;
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private Player _playerRef;
+    [SerializeField] private Shop _shopRef;
     
     
     // Start is called before the first frame update
@@ -35,12 +34,15 @@ public class ShopUI : MenuUI
     {
         base.ShowMenu(on);
         SelectItem(PlayerInventory.Items.FirstOrDefault(),true);
-        _moneyText.SetText("Money \n" + _playerRef.Money);
+        UpdatePlayerMoneyText();
+        
+        //we can only update the player inventory list since shop inventory stays the same
+        PopulateListFromInventory(true);
     }
 
-    public void Setup(Inventory shopInventory, Player player)
+    public void Setup(Shop shop, Player player)
     {
-        _shopInventory = shopInventory;
+        _shopRef = shop;
         _playerRef = player;
         
         PopulateListsFromInventories();
@@ -49,31 +51,58 @@ public class ShopUI : MenuUI
     void PopulateListsFromInventories()
     {
         ClearUILists();
-        foreach (Item item in _shopInventory.Items)
+        PopulateListFromInventory(true);
+        PopulateListFromInventory(false);
+    }
+
+    void PopulateListFromInventory(bool playerList)
+    {
+        // if bool playerList not the player, it is the shops
+        if (playerList)
         {
-            
-            MenuItemButton menuItem = CreateMenuItemButton(_shopButtonPrefab,item,shopContentParent.transform," | Shop Inventory Menu Item Button");
-            menuItem.AddListenerOnClick(delegate { SelectItem(menuItem.ButtonItem,true);});
-            
+            foreach (Item item in PlayerInventory.Items)
+            {
+                MenuItemButton menuItem = CreateMenuItemButton(_shopButtonPrefab,item,playerContentParent.transform," | Player Inventory Menu Item Button");
+                menuItem.AddListenerOnClick(delegate { SelectItem(menuItem.ButtonItem,false);});
+            }
         }
-        foreach (Item item in PlayerInventory.Items)
+        else
         {
-            MenuItemButton menuItem = CreateMenuItemButton(_shopButtonPrefab,item,playerContentParent.transform," | Player Inventory Menu Item Button");
-            menuItem.AddListenerOnClick(delegate { SelectItem(menuItem.ButtonItem,false);});
+            foreach (Item item in ShopInventory.Items)
+            {
+            
+                MenuItemButton menuItem = CreateMenuItemButton(_shopButtonPrefab,item,shopContentParent.transform," | Shop Inventory Menu Item Button");
+                menuItem.AddListenerOnClick(delegate { SelectItem(menuItem.ButtonItem,true);});
+            
+            }
         }
+        
     }
     
     void ClearUILists()
     {
-        foreach (Transform child in shopContentParent.transform)
+        ClearUIList(true);
+        ClearUIList(false);
+    }
+
+    void ClearUIList(bool playerList)
+    {
+        //if playerList bool is not the player, it is the shops
+        if (playerList)
         {
-            Destroy(child.gameObject);
+            foreach (Transform child in playerContentParent.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        else
+        {
+            foreach (Transform child in shopContentParent.transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
         
-        foreach (Transform child in playerContentParent.transform)
-        {
-            Destroy(child.gameObject);
-        }
     }
 
     public void SelectItem(Item item, bool fromShop)
@@ -83,7 +112,7 @@ public class ShopUI : MenuUI
         if(item== null) return;
         //we update the buttons text and functions to reflect the new selected item
         _buyPriceText.SetText((item.Price).ToString());
-        _sellPriceText.SetText((item.SellPriceModifier * item.Price).ToString());
+        _sellPriceText.SetText(((int)(item.SellPriceModifier * item.Price)).ToString());
         _buyButton.onClick.RemoveAllListeners();
         _sellButton.onClick.RemoveAllListeners();
         
@@ -96,18 +125,34 @@ public class ShopUI : MenuUI
         _buyButton.colors = colors;
             
         if(hasItem && !fromShop) // only sell if we have the item
-            _sellButton.onClick.AddListener(delegate { item.Sell(_playerRef,this); });
+            _sellButton.onClick.AddListener(delegate { TryTransaction(item,_sellButton,false); });
         
         if(fromShop)
-            _buyButton.onClick.AddListener(delegate { item.Buy(_playerRef,this); });
+            _buyButton.onClick.AddListener(delegate { TryTransaction(item, _buyButton,true); });
             
         
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void TryTransaction(Item item, Button button, bool buy)
     {
+        //buy == true is buy, the opposite is sell
+        bool success = buy ? item.Buy(_playerRef, _shopRef) : item.Sell(_playerRef, _shopRef);
+
+        if (success == false)
+        {
+            button.transform.DOShakeRotation(0.5f,90f,10,90f,true,ShakeRandomnessMode.Harmonic);
+        }
+        else
+        {
+            UpdatePlayerMoneyText();
+        }
         
+    }
+
+    public void UpdatePlayerMoneyText()
+    {
+        if (_moneyText != null && _playerRef != null) 
+            _moneyText.SetText("Money \n" + _playerRef.Money);
     }
 }

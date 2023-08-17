@@ -33,19 +33,29 @@ public class Clothing : Item, IWearable
         FirstFrameSpriteName = firstFrameSpriteName;
         ClothingType = clothingType;
     }
-    public override void Buy(Player buyer, ShopUI seller)
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public override void Sell(Player seller, ShopUI buyer)
+    public Clothing(Item clothing)
     {
-        throw new System.NotImplementedException();
+        ID = clothing.ID;
+        Name = clothing.Name;
+        ItemType = clothing.ItemType;
+        Description = clothing.Description;
+        Price = clothing.Price;
+        SellPriceModifier = clothing.SellPriceModifier;
+        Icon = clothing.Icon;
+        FirstFrameSpriteName = clothing.FirstFrameSpriteName;
+        ClothingType = clothing.ClothingType;
     }
 
     public override void Use(Player player)
     {
         Wear(player);
+    }
+
+    public override void Trash(Player player)
+    {
+        player.Undress(this);
+        base.Trash(player);
     }
 
     public void Wear(Player player)

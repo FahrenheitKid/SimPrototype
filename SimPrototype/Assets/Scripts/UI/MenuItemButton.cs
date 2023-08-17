@@ -6,9 +6,17 @@ using UnityEngine.UI;
 
 public class MenuItemButton : MonoBehaviour
 {
-    [field: SerializeField] public Item ButtonItem { get; private set; }
+    
+    public Item ButtonItem
+    {
+        get => _buttonItem;
+        private set => _buttonItem = value;
+    }
 
     [SerializeField] private Image _image;
+
+    [SerializeField] private Item _buttonItem;
+
     // Start is called before the first frame update
     void Start()
     {

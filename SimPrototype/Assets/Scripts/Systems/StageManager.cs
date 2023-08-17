@@ -13,8 +13,9 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _shop.SetupListeners(_player,true);
-        _shopUI.Setup( new Inventory(GameDatabase.Instance.ItemsDatabase.GetAllItems()),_player);
+        //here we inject references needed
+        _shop.Setup(_player);
+        _shopUI.Setup( _shop,_player);
         _inventoryUI.Setup(_player);
     }
 

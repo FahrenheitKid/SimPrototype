@@ -44,6 +44,14 @@ public class ItemDatabase : ScriptableObject
             return null;
         }
     }
+    
+    public Item GetRandomItem(Enums.ItemType itemType)
+    {
+        List<ItemData> filteredItem = Items.FindAll(x => x.ItemType == itemType);
+        ItemData itemData = filteredItem.ElementAtOrDefault(Random.Range(0, filteredItem.Count));
+
+        return ConvertItemDataToItem(itemData);
+    }
 
     public List<Item> GetAllItems()
     {

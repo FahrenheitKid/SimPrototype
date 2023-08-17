@@ -11,8 +11,11 @@ public class Player : MonoBehaviour
     
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerAnimatorHandler _animatorHandler;
-    [field: SerializeField] private Inventory _playerInventory;
+    private Inventory _playerInventory;
     [field: SerializeField] public int Money { get; private set; }
+    
+    //Only for debug, can remove for build
+    [SerializeField] [SerializeReference] private List<Item> _itemsDebug;
 
     #region CurrentClothing
     
@@ -89,7 +92,7 @@ public class Player : MonoBehaviour
     public Inventory PlayerInventory
     {
         get => _playerInventory;
-        set => _playerInventory = value;
+        private set => _playerInventory = value;
     }
 
     // Start is called before the first frame update
@@ -102,6 +105,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Hair = GameDatabase.Instance.ItemsDatabase.GetRandomClothing(Enums.ClothingType.Hair);
+        
+        //start player with some random start items
+        PlayerInventory.Add(GameDatabase.Instance.ItemsDatabase.GetRandomItem(Enums.ItemType.Souvenir));
+        PlayerInventory.Add(GameDatabase.Instance.ItemsDatabase.GetRandomItem(Enums.ItemType.Consumable));
+        PlayerInventory.Add(GameDatabase.Instance.ItemsDatabase.GetRandomClothing(Enums.ClothingType.Shirt));
+
+        _itemsDebug = PlayerInventory.Items;
     }
 
     void Init()
@@ -119,6 +129,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //only for Debug and easy playtesting
         if (Input.GetKeyDown(KeyCode.M))
         {
             Money += 100;
@@ -140,10 +152,17 @@ public class Player : MonoBehaviour
             OnShopExit?.Invoke();
         }
     }
+    
+    public void AddItem(Item item)
+    {
+        PlayerInventory.Add(item);
+        _itemsDebug = PlayerInventory.Items;
+    }
 
     public void RemoveItem(Item item)
     {
         PlayerInventory.Remove(item);
+        _itemsDebug = PlayerInventory.Items;
     }
 
     public void Wear(Clothing clothing)
@@ -170,5 +189,35 @@ public class Player : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    public void Undress(Clothing clothingPiece)
+    {
+        switch (clothingPiece.ClothingType)
+        {
+            case Enums.ClothingType.Shirt:
+                Shirt = null;
+                break;
+            case Enums.ClothingType.Pants:
+                Pants = null;
+                break;
+            case Enums.ClothingType.Shoes:
+                Shoes = null;
+                break;
+            case Enums.ClothingType.Hair:
+                Hair = null;
+                break;
+            case Enums.ClothingType.Hat:
+                Hat = null;
+                break;
+            default:
+                break;
+        }
+    }
+    
+    //use negative values to increase
+    public void UpdateMoney(int value)
+    {
+        Money += value;
     }
 }

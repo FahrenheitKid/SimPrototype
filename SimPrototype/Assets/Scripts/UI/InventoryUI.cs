@@ -51,6 +51,7 @@ public class InventoryUI : MenuUI
     {
         base.ShowMenu(on);
         SelectItem(PlayerInventory.Items.FirstOrDefault());
+        PopulateUIListFromInventory();
     }
 
     public override void SelectItem(Item item)
@@ -60,14 +61,46 @@ public class InventoryUI : MenuUI
         //we update the buttons text and functions to reflect the new selected item
         _useButtonText.SetText(item.ItemType == Enums.ItemType.Clothing ? "Wear" : "Use");
         _useButton.onClick.RemoveAllListeners();
-        _useButton.onClick.AddListener(delegate { item.Use(_playerRef); });
+        _useButton.onClick.AddListener(delegate { UseItem(item); });
         _trashButton.onClick.RemoveAllListeners();
-        _trashButton.onClick.AddListener(delegate { item.Trash(_playerRef); });
+        _trashButton.onClick.AddListener(delegate { ThrashItem(item);});
     }
 
-    // Update is called once per frame
-    void Update()
+    void UseItem(Item item)
     {
+        if (item == null) return;
+        if (item.ItemType == Enums.ItemType.Consumable) // if consumable we need to update list
+        {
+            //if fully consumed the item will be trashed so we update the list
+            RemoveItemFromUIList(item); 
+        }
         
+        item.Use(_playerRef);
+    }
+    
+    void ThrashItem(Item item) // removes from the UI and then trash it
+    {
+        if (item == null) return;
+        
+        RemoveItemFromUIList(item); 
+        item.Trash(_playerRef);
+    }
+
+    void RemoveItemFromUIList(Item item)
+    {
+        if (item == null) return;
+        
+        foreach (Transform child in playerContentParent.transform)
+        {
+            MenuItemButton itemButton = child.GetComponent<MenuItemButton>();
+            if(itemButton.ButtonItem == null) continue;
+            if (item.ID == itemButton.ButtonItem.ID)
+            {
+                // remove parent then destroy gameobject
+                itemButton.transform.SetParent(null);
+                Destroy(itemButton.gameObject);
+                return;
+            }
+        }
     }
 }
